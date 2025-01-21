@@ -1,3 +1,5 @@
 print ("Hello World")
 print ("Hello friend")
 print ("Hello now")
+print ("Hello")
+print (2+2)
