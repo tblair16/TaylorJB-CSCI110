@@ -30,5 +30,8 @@ t=float(input("number of years"))
 #formula for final amount after compounded interest
 print(P*(1+(r/n)) ** (n*t))
 
-#Problem 7: Clock
-startingtime=200
+#Problem 8: Clock Time
+startingtime=int(input("Time Now (In Hours)"))
+waitingtime=int(input("Hours Passed"))
+currenttime=startingtime+waitingtime
+print(currenttime%12)
