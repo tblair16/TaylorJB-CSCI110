@@ -33,5 +33,6 @@ print(P*(1+(r/n)) ** (n*t))
 #Problem 8: Clock Time
 startingtime=int(input("Time Now (In Hours)"))
 waitingtime=int(input("Hours Passed"))
-currenttime=startingtime+waitingtime
-print(currenttime%12)
+timeaddition=startingtime+waitingtime
+currenttime=((timeaddition-1)%12)+1
+print(currenttime)
