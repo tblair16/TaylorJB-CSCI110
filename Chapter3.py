@@ -1,6 +1,6 @@
 #---------------------------------------------
 # Name: Chapter 3
-# Purpose: Practice and Homework
+# Purpose: Practice
 #
 # Author: TaylorJB
 # Created: 1/23/2025
