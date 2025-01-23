@@ -1,3 +1,10 @@
+#---------------------------------------------
+# Name: Chapter 3
+# Purpose: Practice and Homework
+#
+# Author: TaylorJB
+# Created: 1/23/2025
+#----------------------------------------------
 # Chapter 3 Practice
 import turtle
 wn=turtle.Screen()

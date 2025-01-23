@@ -1,3 +1,10 @@
+#---------------------------------------------
+# Name: Practice
+# Purpose: Practice
+#
+# Author: TaylorJB
+# Created: 1/21/2025
+#----------------------------------------------
 print ("Hello World")
 print ("Hello friend")
 print ("Hello now")
