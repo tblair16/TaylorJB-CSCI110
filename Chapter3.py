@@ -36,6 +36,4 @@ snake.right(90)
 snake.forward(25)
 
 turtle.done()
-
-
-# Chapter 3 Homework
+wn.mainloop()
