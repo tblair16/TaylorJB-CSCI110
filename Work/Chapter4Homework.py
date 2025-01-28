@@ -35,5 +35,4 @@ for i in range(5):
     taylor.pendown()
     size=size+40
 
-
 wn.mainloop()
