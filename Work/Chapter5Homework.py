@@ -5,7 +5,6 @@
 # Created: 1/29/2025
 #---------------------------------------------
 #Question 1
-
 def day_name(day): #Defining function 
     if day==0:
         return("Sunday")
