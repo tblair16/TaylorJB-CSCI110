@@ -5,7 +5,7 @@
 # Author: TaylorJB
 # Created: 1/21/2025
 #---------------------------------------------
-#Chapter 1 Practice
+#Chapter 2 Practice
 print ("Hello World")
 print ("Hello friend")
 print ("Hello now")
@@ -60,5 +60,20 @@ snake.forward(25)
 
 turtle.done()
 wn.mainloop()
-
+#--------------------------------------------------
 #Chapter 4 Practice
+
+import turtle
+def draw_square(t,sz):
+    """Make turtle t draw a square of sz"""
+    for i in range(4):
+      t.forward(sz)
+      t.left(90)
+
+wn=turtle.Screen()
+wn.bgcolor("lightgreen")
+wn.title("Alex meets a function")
+
+alex=turtle.Turtle()
+draw_square (alex,50)
+wn.mainloop()
