@@ -1,7 +1,9 @@
 #---------------------------------------------
 # Name: Chapter 5 Practice
+# Purpose: Practice
 #
 # Author: TaylorJB
+#
 # Created: 1/29/2025
 #---------------------------------------------
 age = 18

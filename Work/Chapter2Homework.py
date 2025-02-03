@@ -3,6 +3,7 @@
 # Purpose: Homework
 #
 # Author: TaylorJB
+#
 # Created: 1/21/2025
 #----------------------------------------------
 #Problem 1: Storing each word as own variable
