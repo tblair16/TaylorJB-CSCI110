@@ -5,7 +5,7 @@
 # Author: TaylorJB
 # Created: 5/1/2025
 #----------------------------------------------
-#Hangman:
+#Hangman: beep beep
 import random
 import turtle
 
