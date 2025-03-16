@@ -15,7 +15,7 @@ def process_text():
     text=text.lower()
     words=text.split() #Splitting words and making them lowercase
 
-    punctuation = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~0123456789“”‘’" 
+    punctuation = "!\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~0123456789“”''" 
     def cleaning_words(s): #Function to get rid of all punctuation
         s_sans_punct = ""
         for letter in s:
