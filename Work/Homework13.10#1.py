@@ -18,4 +18,4 @@ def readbackwards(oldfile, newfile): #Creating function to reverse order of word
     infile.close()
     outfile.close()
 
-readbackwards("oldfile.txt","newfile.txt")
+readbackwards("Work/oldfile.txt","Work/newfile.txt")
