@@ -15,6 +15,7 @@ wn.bgcolor("Black")
 pen=turtle.Turtle()
 pen.color("pink")
 pen.speed(3)
+wn.title("Let's Play Hangman")
 
 #Hangman figures made by incorrect steps
 def create_hangman(mistakes):
@@ -63,7 +64,9 @@ def create_hangman(mistakes):
         pen.pendown()
         pen.goto(70, 0)
     elif mistakes == 11:
+        turtle.done()
         print("Gameover. The correct word was {}".format(chosen_word))
+    turtle.update()
 
 def choose_word():
     wordfile=open("FinalProject/wordlist.txt", "r" )
@@ -73,18 +76,35 @@ def choose_word():
 
 chosen_word=choose_word()
 guess_amount = 10
+guessed_letters=[]
+
+correctcount = 0
+incorrectcount = 0
+mistakes = 0
 
 for i in range(guess_amount):
     guess=input("Guess a letter.").lower()
-    resultfile=open ("FinalProject/results.txt", "w")
-    resultfile.write("{}          {}\n".format("Correct","Incorrect"))
-    resultfile.write("====================\n")
+    
+    if guess in guessed_letters:
+        print("You guessed that letter already. Guess again!")
+        continue
+    guessed_letters.append(guess)
+
     if guess in chosen_word:
-        correctcount + 1
-        resultfile.write("{}".format(correctcount))
+        correctcount += 1
         print("Correct!")
+    
     else:
-        incorrectcount + 1
-        resultfile.write("{}".format(incorrectcount))
-        mistakes + 1
+        incorrectcount += 1
+        mistakes += 1
         print("Wrong guess.")
+        if create_hangman(mistakes):
+            break
+
+
+    with open("FinalProject/results.txt", "w") as resultfile:
+        resultfile.write("{}          {}\n".format("Correct","Incorrect"))
+        resultfile.write("==========================\n")
+        resultfile.write("{}............{}".format(correctcount,incorrectcount))
+
+turtle.done()
