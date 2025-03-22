@@ -62,10 +62,11 @@ def create_hangman(mistakes):
         pen.goto(50, 20)
         pen.pendown()
         pen.goto(70, 0)
-
+    elif mistakes == 11:
+        print("Gameover. The correct word was {}".format(chosen_word))
 
 def choose_word():
-    wordfile=open("wordlist.txt", "r" )
+    wordfile=open("FinalProject/wordlist.txt", "r" )
     words=wordfile.readlines()
     wordfile.close()
     return random.choice(words)
@@ -75,10 +76,12 @@ guess_amount = 10
 
 for i in range(guess_amount):
     guess=input("Guess a letter.").lower()
-    resultfile=open ("results.txt", "w")
-    if guess in choose_word:
+    resultfile=open ("FinalProject/results.txt", "w")
+    if guess in chosen_word:
         resultfile.write("1 correct guess")
         print("Correct!")
     else:
-        resultfile.write("1 correct guess")
+        resultfile.write("1 incorrect guess")
+        create_hangman()
         print("Wrong guess.")
+
