@@ -77,11 +77,14 @@ guess_amount = 10
 for i in range(guess_amount):
     guess=input("Guess a letter.").lower()
     resultfile=open ("FinalProject/results.txt", "w")
+    resultfile.write("{}          {}\n".format("Correct","Incorrect"))
+    resultfile.write("====================\n")
     if guess in chosen_word:
-        resultfile.write("1 correct guess")
+        correctcount + 1
+        resultfile.write("{}".format(correctcount))
         print("Correct!")
     else:
-        resultfile.write("1 incorrect guess")
-        create_hangman()
+        incorrectcount + 1
+        resultfile.write("{}".format(incorrectcount))
+        mistakes + 1
         print("Wrong guess.")
-
