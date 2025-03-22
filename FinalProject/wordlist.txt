@@ -1,9 +1,10 @@
 friends
 whales
+house
+car
 cats
 dogs
-fishing
-school
-spanish
-university
-goggles
+speak
+mountain
+closet
+town
