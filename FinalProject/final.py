@@ -5,7 +5,7 @@
 # Author: TaylorJB
 # Created: 5/1/2025
 #----------------------------------------------
-#Hangman: beep beep
+#Hangman:
 import random
 import turtle
 
@@ -99,16 +99,16 @@ while mistakes<=10:
     
     word_guessed = all(letter in guessed_letters for letter in chosen_word)
     if word_guessed:
-        print("Congratulations! You guessed your word: {}.")
+        print("Congratulations! You guessed your word: {}.".format(chosen_word))
 
 if mistakes==10: #Result when the player loses the game 
     print ("The game is over. The correct word was {}".format(chosen_word))
 
 
 
-    with open("FinalProject/results.txt", "w") as resultfile:
-        resultfile.write("{}          {}\n".format("Correct","Incorrect"))
-        resultfile.write("==========================\n")
-        resultfile.write("{}............{}".format(correctcount,incorrectcount))
+with open("FinalProject/results.txt", "w") as resultfile:
+    resultfile.write("{}          {}\n".format("Correct","Incorrect"))
+    resultfile.write("==========================\n")
+    resultfile.write("{}.................{}".format(correctcount,incorrectcount))
 
 turtle.done
