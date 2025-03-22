@@ -73,14 +73,13 @@ def choose_word():
     return random.choice(words).strip()
 
 chosen_word=choose_word()
-guess_amount = 10
 guessed_letters=[]
 
 correctcount = 0
 incorrectcount = 0
 mistakes = 0
 
-for i in range(guess_amount):
+while mistakes<=10:
     guess=input("Guess a letter.").lower()
     
     if guess in guessed_letters:
@@ -97,6 +96,14 @@ for i in range(guess_amount):
         mistakes += 1
         print("Wrong guess.")
         create_hangman(mistakes)
+    
+    word_guessed = all(letter in guessed_letters for letter in chosen_word)
+    if word_guessed:
+        print("Congratulations! You guessed your word: {}.")
+
+if mistakes==10: #Result when the player loses the game 
+    print ("The game is over. The correct word was {}".format(chosen_word))
+
 
 
     with open("FinalProject/results.txt", "w") as resultfile:
@@ -104,4 +111,4 @@ for i in range(guess_amount):
         resultfile.write("==========================\n")
         resultfile.write("{}............{}".format(correctcount,incorrectcount))
 
-turtle.done()
+turtle.done
