@@ -5,7 +5,7 @@
 # Author: TaylorJB
 # Created: 5/1/2025
 #----------------------------------------------
-#Hangman:
+#Hangman: The game is animal themed hangman.
 import random
 import turtle
 import sys
@@ -67,12 +67,12 @@ def create_hangman(mistakes):
         pen.pendown()
         pen.goto(70, 0)
 
+#This function selects a random word from the wordlist.txt file. 
 def choose_word():
     with open("FinalProject/wordlist.txt", "r" ) as wordfile:
         words=wordfile.readlines()
     wordfile.close()
     return random.choice(words).strip()
-
 
 def playgame():
     chosen_word=choose_word()
@@ -123,7 +123,7 @@ def playgame():
     pen.clear()
 
 #-----------------------------------------------------------
-#Unit Testing
+#Unit Testing:
 #Check to see if letter guess is in the word
 def unit_test_guess(chosen_word, guess, result): 
     userguess = guess in chosen_word
@@ -159,11 +159,9 @@ def test_suite():
     print("Testing complete")
 #--------------------------------------------------------------
 
-
-
 test_suite()
 
-#Running code, everything above this is functions
+#Running code
 while keep_playing == True:
     playgame() 
     gameplay = str(input("Would you like to keep playing?(Y/N)"))
